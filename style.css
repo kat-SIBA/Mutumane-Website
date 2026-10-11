@@ -448,15 +448,18 @@ nav ul li a.active {
     color: var(--text-main);
     margin: 20px 0 10px;
     font-size: 1.25rem;
+    hyphens: none !important;
 }
 
 .about-content h3:first-child {
     margin-top: 0;
+    hyphens: none !important;
 }
 
 .about-content p {
     color: var(--text-muted);
     margin-bottom: 15px;
+    hyphens: none !important;
 }
 
 .about-img {
