@@ -639,4 +639,123 @@ footer {
     .info-card img {
         display: none !important;
     }
+
+    body, main {
+        padding-top: 100px !important; /* Prevents sticky header from clipping page headings */
+      }
+    
+      /* 2. Compact Header Bar */
+      header {
+        padding: 10px 16px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
+      }
+    
+      /* Logo / Brand scaling on phones */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    
+      .logo-container img {
+        height: 36px;
+        width: auto;
+      }
+    
+      /* 3. Hamburger Toggle Icon */
+      .nav-toggle-label {
+        display: block !important;
+        cursor: pointer;
+        padding: 8px;
+      }
+    
+      /* 4. Collapsible Mobile Menu Dropdown */
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111111; /* Dark background matching the header theme */
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+    
+      .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+    
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    
+      .nav-menu a {
+        display: block;
+        padding: 14px 0;
+        font-size: 0.95rem;
+        color: #ffffff;
+        text-decoration: none;
+        width: 100%;
+      }
+    
+      /* CTA Button inside mobile dropdown menu */
+      .nav-menu .order-btn,
+      .nav-menu .cta-button {
+        margin: 16px auto;
+        width: 85%;
+        display: block;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 0.95rem;
+      }
+    
+      /* Reveal menu when checkbox toggle is checked */
+      .nav-toggle:checked ~ .nav-menu {
+        max-height: 380px; /* Room for links and Order button */
+      }
+    
+      /* 5. Typography Scaling for Mobile */
+      h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+      }
+    
+      h2, .section-title {
+        font-size: 1.25rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+      }
+    
+      p, .card p, .operating-hours p {
+        font-size: 0.95rem !important;
+        line-height: 1.45 !important;
+      }
+    
+      /* 6. Card Padding & Border Clearance */
+      .card, .content-box, .info-card {
+        padding-top: 20px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        padding-bottom: 28px !important; /* Prevents text from crowding the bottom border */
+        margin-bottom: 20px !important;
+        border-radius: 12px;
+      }
 }
