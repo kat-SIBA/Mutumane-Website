@@ -708,67 +708,47 @@ footer {
     display: none !important;
   }
   
-  /* =========================================================
-     WhatsApp Floating Widget & Tooltip (Mobile Fix)
-     ========================================================= */
+/* =========================================================
+   WhatsApp Floating Widget (Green & Clean)
+      ========================================================= */
 
-  /* 1. Ensure Floating Container Position & Stacking */
-  .whatsapp-float {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    z-index: 9998 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    text-decoration: none !important;
-  }
+      /* Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed !important;
+          bottom: 20px !important;
+            right: 20px !important;
+              z-index: 9998 !important;
+                display: flex !important;
+                  align-items: center !important;
+                    justify-content: center !important;
+                      
+                        /* Official WhatsApp Green */
+                          background-color: #25D366 !important; 
+                            color: #ffffff !important;
+                              
+                                width: 55px !important;
+                                  height: 55px !important;
+                                    border-radius: 50% !important;
+                                      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+                                        text-decoration: none !important;
+                                          transition: transform 0.3s ease, background-color 0.3s ease !important;
+                                          }
 
-  /* 2. Mobile Tooltip (Always Visible with Gentle Pulse) */
-  .whatsapp-tooltip {
-    position: absolute !important;
-    right: 68px !important; /* Spacing from icon */
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    background-color: #25D366 !important;
-    color: #2b2b2b !important;
-    padding: 8px 14px !important;
-    border-radius: 20px !important;
-    font-size: 0.8rem !important;
-    font-weight: 700 !important;
-    white-space: nowrap !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
-    pointer-events: none !important;
-    
-    /* Force visibility on mobile screens */
-    opacity: 1 !important;
-    visibility: visible !important;
-    
-    /* Subtle attention-getter for phone users */
-    animation: tooltip-bounce 2s infinite ease-in-out !important;
-  }
+                                          /* Hover effect */
+                                          .whatsapp-float:hover {
+                                            background-color: #128C7E !important; /* Darker green on hover */
+                                              transform: scale(1.08) !important;
+                                              }
 
-  /* Little tail arrow pointing toward the icon */
-  .whatsapp-tooltip::after {
-    content: '' !important;
-    position: absolute !important;
-    top: 50% !important;
-    right: -6px !important;
-    transform: translateY(-50%) !important;
-    border-width: 6px 0 6px 6px !important;
-    border-style: solid !important;
-    border-color: transparent transparent transparent #ffffff !important;
-  }
+                                              /* Icon centering and styling */
+                                              .whatsapp-float svg,
+                                              .whatsapp-float i {
+                                                width: 30px !important;
+                                                  height: 30px !important;
+                                                    fill: #ffffff !important;
+                                                      color: #ffffff !important;
+                                                      }
 
-  /* Mobile Animation Keyframes */
-  @keyframes tooltip-bounce {
-    0%, 100% {
-      transform: translateY(-50%) translateX(0);
-    }
-    50% {
-      transform: translateY(-50%) translateX(-5px);
-    }
-  }
-
-
+                                                      /* Tooltip styles completely removed */
+                                                      
 }
